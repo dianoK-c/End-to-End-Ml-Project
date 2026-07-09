@@ -11,10 +11,10 @@ def get_requirements(file_path:str)->List[str]:
        return requirements
 setup(
 
-    name= "my_package:",
-    version= "0.1.0",
-    author = "Anushka",
-    authoremail= "anushkaa7631@gmail.com",
-    packages= find_packages(),
-    install_reuires= get_requirements('requirements.txt')
+    name="my_package",
+    version="0.1.0",
+    author="Anushka",
+    author_email="anushkaa7631@gmail.com",
+    packages=find_packages(),
+    install_requires=get_requirements('requirements.txt')
 )
