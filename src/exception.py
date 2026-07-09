@@ -1,5 +1,5 @@
 import sys
-import logging
+from logger import logging
 
 def handle_exception(error, error_detail: sys):
     _,_,exc_tb = error_detail.exc_info()
@@ -21,8 +21,4 @@ def handle_exception(error, error_detail: sys):
         def __str__(self):
             return self.error_message
         
-        if __name__ == "__main__":
-            try:
-                a = 1 / 0
-            except Exception as e:
-                raise CustomException(e, sys)
+        
