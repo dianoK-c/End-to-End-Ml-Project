@@ -88,10 +88,10 @@ class DataTransformation:
             target_column_name="math_score"
             numerical_columns = ["writing_score", "reading_score"]
 
-            input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
+            input_feature_train_df=train_df.drop(columns=[target_column_name])
             target_feature_train_df=train_df[target_column_name]
 
-            input_feature_test_df=test_df.drop(columns=[target_column_name],axis=1)
+            input_feature_test_df=test_df.drop(columns=[target_column_name])
             target_feature_test_df=test_df[target_column_name]
 
             logging.info(
@@ -122,3 +122,4 @@ class DataTransformation:
             )
         except Exception as e:
             raise CustomException(e,sys)
+        
